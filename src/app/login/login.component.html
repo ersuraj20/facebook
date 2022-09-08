@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facebook</title>
+</head>
+
+<body>
+  <div class="page">
+
+    <div class="left">
+      <div class="left_items">
+        <img class="fb_logo" src="../assets/fb_logo.svg" alt="Facebook">
+        <div class="fb_tagline">
+          Facebook helps you connect and share with the people in your life.
+        </div>
+      </div>
+    </div>
+
+    <div class="right">
+      <div class="right_items">
+        <form [formGroup]="loginForm" (ngSubmit)="loginUser();">
+          <div class="login-box" >
+            
+            <input type="text" class="input_feilds" name="username" id="username" formControlName="username"
+              placeholder="Email address or phone number">
+              
+            
+            <input type="password" class="input_feilds" name="pwd" id="pwd" formControlName="pwd"
+              placeholder="Password">
+              
+            
+            <button *ngIf="loginForm.valid" class="login_btn">Log In</button>
+            <button *ngIf="!loginForm.valid" class="login_btn_Disabled" [disabled]="!loginForm.valid">Log In</button>
+            
+            <div class="forgot_link">
+              <a href="#">Forgotten password?</a>
+            </div>
+            <hr>
+            
+            <div class="newAcc_btn">
+              <button>Create New Account</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

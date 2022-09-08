@@ -1,0 +1,139 @@
+body{
+    margin: -8px -8px;
+    background-color: #F0F2F5
+    // background-color: #8394ae
+}
+.page{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    .left{
+        height: 100%;
+        width: 55%;
+        // background-color: rgba(203, 108, 108, 0.8);
+    }
+    .right{    
+        height: 100%;
+        width: 45%;
+        // border: 2px solid gray;
+    }
+}
+
+.left_items{
+    margin: 172px 100px;
+    display: flex;
+    flex-direction: column;
+   
+    img{
+        height: 100px;
+        width: 300px;
+
+    }
+    .fb_tagline{
+        
+        display: inline;
+        font-size: 28px;
+        font-weight: normal;
+        line-height: 32px;
+        width: 500px;
+        margin-left: 39px;
+        font-family: Helvetica,Arial,sans-serif;
+        margin-top: -17px;
+    }
+   
+}
+
+.right_items{
+    .login-box{
+        width: 392px;
+        height: 330px;
+        margin: 120px 20px;
+        border-radius: 10px;
+        padding: 10px 10px;
+        background-color: white;
+        box-shadow: 0 0 10px darken($color: #F0F2F5, $amount: 5);
+      
+        .input_feilds{
+            width: 355px;
+            height: 23px;
+            padding: 15px;
+            font-size: medium;
+            border-radius: 5px;
+            border: 1px solid rgba(128, 128, 128,0.5);
+            margin: 4px 4px;
+            &:focus{
+                outline-width: 1px;
+                outline-color: rgba(24, 119, 242, 0.70);
+                box-shadow: 0 0 3px #1897e7;
+            }
+        }
+
+        @mixin btn-commons {
+            width: 387px;
+            height: 50px;
+            padding: 15px;
+            font-size: large;
+            font-weight: bold;
+            border-radius: 5px;
+            border:none !important;
+            margin: 8px 4px;
+            color:white;
+        }
+        .login_btn{
+            @include btn-commons;
+            background-color: rgb(24, 119, 242);
+            &:hover{
+                background-color: darken($color:rgb(24,119,242), $amount: 5);
+                cursor: pointer;
+            }
+        }
+        .login_btn_Disabled{
+           @include btn-commons;
+            background-color: lighten($color: rgb(24, 119, 242), $amount: 10);
+            &:hover{
+                cursor: pointer;
+            }
+        }
+
+        .forgot_link{
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            margin-bottom: 22px;
+            a{
+                color:rgb(24, 119, 242);
+                text-decoration: none;
+                &:hover{
+                    text-decoration: underline;
+                }
+            }
+        }
+        hr{
+            width: 390px;
+            opacity: 50%;
+            margin-bottom: 22px;
+        }
+        .newAcc_btn{
+            display: flex;
+            justify-content: center;
+            button{
+                width: 200px;
+                height: 50px;
+                padding: 10px;
+                font-size: large;
+                font-weight: bold;
+                border-radius: 5px;
+                border:none !important;
+                background-color: #42b72a;
+                color:white;
+                &:hover{
+                    background-color: darken($color: #42b72a, $amount: 5);
+                    cursor: pointer;
+                }
+            }    
+        }
+    }
+}
+
+
+
